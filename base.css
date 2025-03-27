@@ -1,0 +1,89 @@
+/* ===== 共通リセット・基本設定 ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+    html {
+        font-size: 62.5%;
+    }
+  
+  body {
+    font-family: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic, sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: #436185;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    background-image: url("images/background_supu.jpg"); /* あなたの背景画像を指定してください */
+    background-size: 50%;
+    background-color:rgba(255,255,255,0.87);
+    background-blend-mode:lighten;
+  }
+
+  h2 {
+    text-align: center;
+  }
+  
+  /* ===== ヘッダーとフッター ===== */
+  .site-header,
+  .site-footer {
+    background-color: rgba(95, 191, 255, 1);
+    text-align: center;
+    padding: 1rem;
+    color:rgba(255, 255, 255, 1);
+  }
+  
+  /* ===== メインコンテンツエリア ===== */
+  .main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* ===== Grid レイアウト（1段目のセクション）===== */
+  .section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+  }
+  
+  .left-column{
+    padding: 1rem;
+    display: flex;
+    justify-content: center; /* 横方向中央寄せ */
+    align-items: center;     /* 縦方向中央寄せ */
+    min-height: 300px; /* 中央寄せを確実に見せるために高さを指定（必要に応じて調整） */
+  }
+
+
+  .profile{
+    font-weight: bold;
+  }
+  .right-column {
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    }
+  
+#top-logo {
+    width: 300px;
+}
+
+#standing-supu{
+    width: 50%;
+}
+  /* ===== レスポンシブ対応（スマホやタブレット） ===== */
+  @media (max-width: 768px) {
+    .section-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
